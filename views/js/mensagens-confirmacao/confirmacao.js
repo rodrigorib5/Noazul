@@ -66,7 +66,7 @@ $('form.login').on('submit', function(event){
 			$('#senha').val('');
 			$('#login').focus();
 		}else{                			
-			window.location.href = '/noazul/';
+			 window.location.reload();
 		}
 	}, "json").error(function(response, status){
 		console.log(response.responseText);
