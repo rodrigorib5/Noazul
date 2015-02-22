@@ -10,7 +10,6 @@
 <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
 <link rel="stylesheet"
 	href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
-
 <!-- Bootstrap Core CSS -->
 <link href="<?=BASE_URL;?>/views/css/bootstrap.min.css" rel="stylesheet">
 
@@ -40,6 +39,7 @@
 	rel="stylesheet" type="text/css">
 
 <script src="<?=BASE_URL;?>/views/js/jquery-1.11.0.js"></script>
+<script src="<?=BASE_URL;?>/views/js/jquery.maskMoney.js"></script>
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

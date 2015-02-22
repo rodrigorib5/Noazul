@@ -22,10 +22,28 @@ switch ($_POST['tipo']) {
             }
             break;
         
-        case 'logout' :
+     case 'logout' :
             SiteController::logout ();
             AppUtil::redirecionar ();
-            break;  
+            break; 
+	
+     case 'gasto' :
+          
+     		switch ($_POST['acao']){
+     			
+     			case 'salvar' :
+     					header('Content-Type: application/json');     			
+     					$gastoController = new GastoController();
+	
+     					$gastoController->salvarGasto($_POST['descricao'], $_POST['valor'], AppUtil::dataParaBd($_POST['data']), $_POST['observacao'], '0', $_POST['tipo-gasto']);
+     					echo json_encode(["type" => 'success']);
+     					exit;
+                case 'pagar' :
+                        $gastoController = new GastoController();
+                        $gastoController->pagarGasto($_POST['idGasto'], $_POST['valorGasto']);
+                        echo json_encode(["type" => 'success']);
+                        exit;
+     		}
 
     case 'grafico' :
 

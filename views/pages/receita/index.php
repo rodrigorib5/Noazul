@@ -1,8 +1,8 @@
 <?php
-
 $receitaController = new ReceitaController();
 $todasReceitas = $receitaController->getTodasReceitas();
-
+$receitaLíquida = $receitaController->getReceitaLiquida();
+$valorTotal = null;
 ?>
 <div class="row">
     <div class="col-lg-12">
@@ -36,11 +36,13 @@ $todasReceitas = $receitaController->getTodasReceitas();
                                 </tr>
                             </thead>
                             <tbody>
-                            <?php foreach ($todasReceitas as $receita){ ?>                                                                  
+                            <?php foreach ($todasReceitas as $receita){ 
+                            	$valorTotal += $receita->valor;
+                            	?>                                                                  
                                 <tr>
                                     <td class="gradeA"><?= $receita->id ?></td>
                                     <td class="gradeA"><?= $receita->descricao ?></td>
-                                    <td class="gradeA"><?= $receita->valor ?></td>                                        
+                                    <td class="gradeA">R$ <?= $receita->valor ?></td>                                        
                                     <td class="gradeA"><?= AppUtil::showHora($receita->data) ?></td>
                                     <td class="gradeA"><?= AppUtil::showHora($receita->data) ?></td>
                                     <td class="gradeA"><?= $receita->observacao ?></td>                                        
@@ -65,10 +67,13 @@ $todasReceitas = $receitaController->getTodasReceitas();
                            <?php }else{
                     				echo "Não há registros";
                     			 } ?>  
-                    </div>                       
-                    <button type="button" class="btn btn-default" onClick="history.go(-1)">Voltar</button>                          
+                    </div>                 
                 </div> 
-                <!-- /.panel-body -->
+                 <div class="h3 col-lg-4">
+                    <button class="btn btn-lg btn-primary" disabled="disabled"><?= "Total: R$ " . $valorTotal ?></button>
+	               	<button class="btn btn-lg btn-primary" disabled="disabled"><?= "Líquida: R$ " . $receitaLíquida ?></button>
+                 </div>    
+                   
             </div>
             <!-- /.panel -->
         </div>

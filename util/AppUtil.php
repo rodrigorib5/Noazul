@@ -1,31 +1,26 @@
 <?php
 class AppUtil {
-	const MENSAGEM_SUCESSO = 'alert alert-success';
-	const MENSAGEM_ALERTA = '';
-	const MENSAGEM_ERRO = 'alert alert-danger';
 	const GASTO_FIXO = 1;
 	const GASTO_VARIAVEL = 2;
 	const GASTO_OCASIONAL = 3;
-	
-	public static function informaMensagem($msg, $class) {
-		$_REQUEST ['msg'] = $msg;
-		$_REQUEST ['class_msg'] = $class;
-	}
+	/**
+	*
+	*Redireciona á pagina após uma ação
+	*/
 	public static function redirecionar($para = null) {
-		if ($para) {
-			header ( "Location: /" . $para . "/" );
+		if($para) {
+			echo "<meta HTTP-EQUIV='Refresh' CONTENT='0;URL=/noazul/$para/'>";
 		} else {
-			header ( "Location: " . BASE_URL );
+			header("Location: /noazul/");
 		}
 	}
-	
 	/**
 	 * Altera data para formato do banco
 	 */
 	public static function dataConvertDb($data) {
 		$hora = date ( 'H:i:s' );
 		$databanco = date_create ( $data . $hora );
-		$dataConvertida = date_format ( $databanco, "Y-m-d H:i:s" );
+		$dataConvertida = date_format ( $databanco, "Y-m-d" );
 		return $dataConvertida;
 	}
 	
@@ -34,7 +29,7 @@ class AppUtil {
 	 */
 	public static function dataParaBd($data) {
 		$date = new DateTime ( $data );
-		$databanco = date_format ( $date, 'Y-m-d H:i:s' );
+		$databanco = date_format ( $date, 'Y-m-d' );
 		return $databanco;
 	}
 	
@@ -54,7 +49,7 @@ class AppUtil {
 	 */
 	public static function showHora($data) {
 		$dataBanco = date_create ( $data );
-		$hora = date_format ( $dataBanco, "d/m/Y H:i" );
+		$hora = date_format ( $dataBanco, "d/m/Y" );
 		return $hora;
 	}
 }

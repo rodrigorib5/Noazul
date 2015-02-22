@@ -15,11 +15,14 @@ class Autenticar extends Model {
 	 * @return mixed
 	 */
 	public function autenticar($login, $senha) {
+		
+		$senhaMd5 = md5($senha);
+		
 		$sql = "SELECT usuario.id, usuario.login, usuario.nome, usuario.perfil_id, perfil.descricao
 				FROM usuario AS usuario
 				INNER JOIN perfil AS perfil
 				ON perfil.id = usuario.perfil_id 
-				WHERE login = '$login' AND senha = '$senha'";
+				WHERE login = '$login' AND senha = '$senhaMd5'";
 		
 		$conexao = $this->conexao->conecta ();
 		

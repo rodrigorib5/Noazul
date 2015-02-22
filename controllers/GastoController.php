@@ -4,7 +4,12 @@
  * @author rodrigorib
  *
  */
-class GastoController {
+class GastoController {	
+	
+	public function salvarGasto($descricao, $valor, $data, $observacao, $pago, $tipoGastoId){
+		$gasto = new Gasto($descricao, $valor, $data, $observacao, $pago, $tipoGastoId);
+		$gasto->salvarGasto();
+	}
 	
 	/**
 	 * @method Retorna todos os gastos
@@ -48,5 +53,34 @@ class GastoController {
 	public function getTipoGasto($tipoGastoId){
 		$gasto = new Gasto();
 		return $gasto->getTipoGasto($tipoGastoId);
+	}
+	/**
+	 * Retorna os gastos que ainda não foram pagos
+	 * @param int $tipoGastoId
+	 * @return objeto:
+	 */
+	public function getTipoGastoAberto($tipoGastoId){
+		$gasto = new Gasto();
+		return $gasto->getTipoGastoAberto($tipoGastoId);
+	}
+	/**
+	 * Retorna os gasto já pagos
+	 * @return object:
+	 */
+	public function getTodosGastosPagos(){
+		$gasto = new Gasto();
+		return $gasto->getTodosGastosPagos();
+	}
+	/**
+	 * Update para pago = 1 conforme o id do gasto
+	 * @param int $gastoId
+	 * @param float $valor
+	 */
+	public function pagarGasto($gastoId, $valor){
+		$gasto = new Gasto();
+		$saldo = new Saldo();
+		
+		$saldo->subtrairSaldo($valor);
+		$gasto->pagarGasto($gastoId);
 	}
 }

@@ -56,6 +56,4 @@ class Receita extends Model {
 		
 		return $result;
 	}
-	
-	
 }

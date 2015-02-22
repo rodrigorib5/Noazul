@@ -15,6 +15,9 @@
 						<a href="<?=BASE_URL;?>/gastos/ocasionais">Ocasionais</a>
 					</li>
 					<li>
+						<a href="<?=BASE_URL;?>/gastos/pagos">Pagos</a>
+					</li>
+					<li>
 						<a href="<?=BASE_URL;?>/gastos/todos">Todos</a>
 					</li>
 				</ul>			
@@ -24,11 +27,14 @@
 				<ul class="nav nav-third-level">					
 					<li>
 						<a href="<?=BASE_URL;?>/receita/">Detalhes</a>
-					</li>							
+					</li>
+					<li>
+						<a href="<?=BASE_URL;?>/receita/recebidas">Recebidas</a>
+					</li>									
 				</ul> 		
 			</li>
 			<li>
-				<a href="#"><i class="fa fa-bar-chart-o"></i>
+				<a href="<?=BASE_URL;?>/relatorio/"><i class="fa fa-bar-chart-o"></i>
 					Relatórios</a>
 			</li>
 		</ul>

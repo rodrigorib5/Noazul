@@ -34,7 +34,7 @@
 									<input class="form-control" placeholder="Senha de usuário" id="senha" name="senha" type="password" required>
 								</div>
 	
-								<input type="submit" id="bota-login" class="btn btn-lg btn-success btn-block" value="Login">
+								<input type="submit" class="btn btn-lg btn-success btn-block" value="Login">
 							</fieldset>
 						</form>
 					</div>

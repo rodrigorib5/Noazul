@@ -1,11 +1,12 @@
 <?php
 $gastoController = new GastoController();
 $todosGastos = $gastoController->getTodosGastos();
+$valorTotal = null;
 ?>
 
 <div class="row">
     <div class="col-lg-12">
-        <h1 class="page-header">Gastos Ocasionais</h1>
+        <h1 class="page-header">Todos os Gastos</h1>
     </div>
 <!-- /.col-lg-12 -->
 </div>
@@ -36,13 +37,14 @@ $todosGastos = $gastoController->getTodosGastos();
                             </tr>
                         </thead>
                         <tbody>
-                        <?php foreach ($todosGastos as $gasto){ ?>  
-                        
+                        <?php foreach ($todosGastos as $gasto){   
+                        	$valorTotal += $gasto->valor;
+                        	?>
                             <tr>
                                 <td class="gradeA"><?= $gasto->id ?></td>
                                 <td class="gradeA"><?= $gasto->descricao ?></td>
                                 <td class="gradeA"><?= $gasto->descricaoTpGasto ?></td>
-                                <td class="gradeA"><?= $gasto->valor ?></td>                                        
+                                <td class="gradeA">R$ <?= $gasto->valor ?></td>                                        
                                 <td class="gradeA"><?= AppUtil::showHora($gasto->data) ?></td>
                                 <td class="gradeA"><?= AppUtil::showHora($gasto->data) ?></td>
                                 <td class="gradeA"><?= $gasto->observacao ?></td>                                        
@@ -70,8 +72,11 @@ $todosGastos = $gastoController->getTodosGastos();
 
                         	}?>
                     </table>
-                </div>              
+                </div> 
             </div>
+                 <div class="h3 col-xs-6 .col-sm-4">
+	                <button class="btn btn-lg btn-primary" disabled="disabled"><?= "Total: R$ " . $valorTotal ?></button>
+	             </div>               
             <!-- /.panel-body -->
         </div>
         <!-- /.panel -->
