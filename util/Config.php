@@ -5,16 +5,16 @@ class Config {
 	 *
 	 * @var unknown
 	 */
-	const DB_NAME = "noazul";
-	const NOME_APLICACAO = "SIM - SISTEMA INTEGRADO DE MONITORAMENTO";
-	const AMBIENTE_ATUAL = "homologacao";
+	const DB_NAME = "";
+	const NOME_APLICACAO = "";
+	const AMBIENTE_ATUAL = "";
 	
-	const DESENVOLVIMENTO = "localhost";
-	const USER_DB_D = "root";
-	const PASS_DB_D = "mnouthbt";
+	const DESENVOLVIMENTO = "";
+	const USER_DB_D = "";
+	const PASS_DB_D = "";
 	
-	const PRODUCAO = "mysql.hostinger.com.br";
-	const USER_DB_P = "u857143281_nazul";
-	const PASS_DB_P = "S2camila";
-	const DB_NAME_PRODUCAO = "u857143281_nazul";
+	const PRODUCAO = "";
+	const USER_DB_P = "";
+	const PASS_DB_P = "";
+	const DB_NAME_PRODUCAO = "";
 } 
