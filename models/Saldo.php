@@ -12,7 +12,7 @@ class Saldo extends Model {
      * @param string $data
      */
     public function __construct() { 
-        parent::__construct ( 'desenvolvimento' );
+        parent::__construct();
     }
     /**
      * Subtrair saldo da conta
@@ -57,7 +57,7 @@ class Saldo extends Model {
      * @return mixed
      */
     private function setSaldo($valor){
-    	$sql ="UPDATE `noazul`.`usuario` SET `saldo`='$valor' WHERE `id`=:idUsuario";
+    	$sql ="UPDATE `usuario` SET `saldo`='$valor' WHERE `id`=:idUsuario";
 
     	$conexao = $this->conexao->conecta();
     

@@ -55,6 +55,7 @@ $('form.login').on('submit', function(event){
 		};
 
 	$.post(url, data, function(response){
+		console.log(response)
 		if(response.type == 'danger'){                			
 			$('#erro-senha').prop('class', 'alert alert-'+ response.type).html('Usuário ou Senha incorreto');
 			$('#login').val('');

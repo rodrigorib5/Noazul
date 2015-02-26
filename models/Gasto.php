@@ -25,12 +25,12 @@ class Gasto extends Model {
         $this->observacao 	= $observacao;
         $this->pago 		= $pago;
         $this->tipoGastoId 	= $tipoGastoId;
-        parent::__construct ( 'desenvolvimento' );
+        parent::__construct();
     }
     
     public function salvarGasto(){
     	    	
-    	$sql = "INSERT INTO `noazul`.`gasto` (`descricao`, `valor`, `data`, `data_cadastro`, `observacao`, `pago`, `usuario_id`, `tipo_gasto_id`) 
+    	$sql = "INSERT INTO `gasto` (`descricao`, `valor`, `data`, `data_cadastro`, `observacao`, `pago`, `usuario_id`, `tipo_gasto_id`) 
     			VALUES ('$this->descricao', '$this->valor', '$this->data', NOW(), '$this->observacao', '0', :usuarioId, '$this->tipoGastoId')";
     	
     	$conexao = $this->conexao->conecta();
@@ -90,10 +90,10 @@ class Gasto extends Model {
     public function getGastosPorDescricaoGrafico(){
         $sql ="SELECT tpGasto.descricao AS label,
                SUM(CASE WHEN tipo_gasto_id in (1,2,3) THEN valor ELSE 0 END) as value
-               FROM noazul.gasto AS gasto
-                   INNER JOIN noazul.tipo_gasto AS tpGasto
+               FROM gasto
+                   INNER JOIN tipo_gasto AS tpGasto
                        ON gasto.tipo_gasto_id = tpGasto.id
-        	   WHERE gasto.usuario_id=:idUsuario AND gasto.pago = 0;
+        	   WHERE gasto.usuario_id=:idUsuario AND gasto.pago = 0
                group by tpGasto.descricao";
         
         $conexao = $this->conexao->conecta();
@@ -189,7 +189,7 @@ class Gasto extends Model {
      * @param int $gastoId
      */
     public function pagarGasto($gastoId){
-    	$sql = "UPDATE `noazul`.`gasto` SET `pago`='1' WHERE `id`='$gastoId'";
+    	$sql = "UPDATE `gasto` SET `pago`='1' WHERE `id`='$gastoId'";
     	
     	$conexao = $this->conexao->conecta();
     	
