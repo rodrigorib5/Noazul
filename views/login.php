@@ -27,11 +27,11 @@
 						<form method="post" class="login">
 							<fieldset>						
 								<div class="form-group">
-									<input class="form-control" placeholder="Login de usuário" id="login" name="login" type="text" autofocus required>
+									<input class="form-control" placeholder="Login: visitante" id="login" name="login" type="text" autofocus required>
 								</div>
 	
 								<div class="form-group">
-									<input class="form-control" placeholder="Senha de usuário" id="senha" name="senha" type="password" required>
+									<input class="form-control" placeholder="senha: 123" id="senha" name="senha" type="password" required>
 								</div>
 	
 								<input type="submit" class="btn btn-lg btn-success btn-block" value="Login">

@@ -9,7 +9,7 @@ $("button.pagar").click(function(){
 	
 		var idGasto = $("#id-gasto").val();
 		var valorGasto = $("#valor-gasto").val();
-		var url = '/noazul/controllers/formsController.php';
+		var url = '/controllers/formsController.php';
 		var data = {
 				tipo: "gasto",
 				acao: "pagar",
@@ -47,7 +47,7 @@ $('form.login').on('submit', function(event){
 	event.preventDefault();
 	var login = $('#login').val();
 	var senha = $('#senha').val();
-	var url = '/noazul/controllers/formsController.php';
+	var url = '/controllers/formsController.php';
 	var data = {
 			tipo: "login",		
 			login: login,

@@ -1,0 +1,99 @@
+[11-Jul-2015 09:56:35 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2005] Unknown MySQL server host 'mysql.hostinger.com.br' (2)' in /var/www/html/noazul/util/Conexao.php:13
+Stack trace:
+#0 /var/www/html/noazul/util/Conexao.php(13): PDO->__construct('mysql:host=mysq...', 'u857143281_nazu...', 'S2camila')
+#1 /var/www/html/noazul/models/Model.php(6): Conexao->__construct('producao')
+#2 /var/www/html/noazul/models/Autenticar.php(9): Model->__construct('producao')
+#3 /var/www/html/noazul/models/SiteController.php(21): Autenticar->__construct()
+#4 /var/www/html/noazul/controllers/formsController.php(11): SiteController::logar('visitante', '123')
+#5 {main}
+  thrown in /var/www/html/noazul/util/Conexao.php on line 13
+[11-Jul-2015 09:56:37 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2005] Unknown MySQL server host 'mysql.hostinger.com.br' (2)' in /var/www/html/noazul/util/Conexao.php:13
+Stack trace:
+#0 /var/www/html/noazul/util/Conexao.php(13): PDO->__construct('mysql:host=mysq...', 'u857143281_nazu...', 'S2camila')
+#1 /var/www/html/noazul/models/Model.php(6): Conexao->__construct('producao')
+#2 /var/www/html/noazul/models/Autenticar.php(9): Model->__construct('producao')
+#3 /var/www/html/noazul/models/SiteController.php(21): Autenticar->__construct()
+#4 /var/www/html/noazul/controllers/formsController.php(11): SiteController::logar('visitante', '123')
+#5 {main}
+  thrown in /var/www/html/noazul/util/Conexao.php on line 13
+[11-Jul-2015 09:56:41 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2005] Unknown MySQL server host 'mysql.hostinger.com.br' (2)' in /var/www/html/noazul/util/Conexao.php:13
+Stack trace:
+#0 /var/www/html/noazul/util/Conexao.php(13): PDO->__construct('mysql:host=mysq...', 'u857143281_nazu...', 'S2camila')
+#1 /var/www/html/noazul/models/Model.php(6): Conexao->__construct('producao')
+#2 /var/www/html/noazul/models/Autenticar.php(9): Model->__construct('producao')
+#3 /var/www/html/noazul/models/SiteController.php(21): Autenticar->__construct()
+#4 /var/www/html/noazul/controllers/formsController.php(11): SiteController::logar('visitante', '123')
+#5 {main}
+  thrown in /var/www/html/noazul/util/Conexao.php on line 13
+[11-Jul-2015 09:56:41 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2005] Unknown MySQL server host 'mysql.hostinger.com.br' (2)' in /var/www/html/noazul/util/Conexao.php:13
+Stack trace:
+#0 /var/www/html/noazul/util/Conexao.php(13): PDO->__construct('mysql:host=mysq...', 'u857143281_nazu...', 'S2camila')
+#1 /var/www/html/noazul/models/Model.php(6): Conexao->__construct('producao')
+#2 /var/www/html/noazul/models/Autenticar.php(9): Model->__construct('producao')
+#3 /var/www/html/noazul/models/SiteController.php(21): Autenticar->__construct()
+#4 /var/www/html/noazul/controllers/formsController.php(11): SiteController::logar('visitante', '123')
+#5 {main}
+  thrown in /var/www/html/noazul/util/Conexao.php on line 13
+[11-Jul-2015 09:56:41 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2005] Unknown MySQL server host 'mysql.hostinger.com.br' (2)' in /var/www/html/noazul/util/Conexao.php:13
+Stack trace:
+#0 /var/www/html/noazul/util/Conexao.php(13): PDO->__construct('mysql:host=mysq...', 'u857143281_nazu...', 'S2camila')
+#1 /var/www/html/noazul/models/Model.php(6): Conexao->__construct('producao')
+#2 /var/www/html/noazul/models/Autenticar.php(9): Model->__construct('producao')
+#3 /var/www/html/noazul/models/SiteController.php(21): Autenticar->__construct()
+#4 /var/www/html/noazul/controllers/formsController.php(11): SiteController::logar('visitante', '123')
+#5 {main}
+  thrown in /var/www/html/noazul/util/Conexao.php on line 13
+[11-Jul-2015 09:56:42 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2005] Unknown MySQL server host 'mysql.hostinger.com.br' (2)' in /var/www/html/noazul/util/Conexao.php:13
+Stack trace:
+#0 /var/www/html/noazul/util/Conexao.php(13): PDO->__construct('mysql:host=mysq...', 'u857143281_nazu...', 'S2camila')
+#1 /var/www/html/noazul/models/Model.php(6): Conexao->__construct('producao')
+#2 /var/www/html/noazul/models/Autenticar.php(9): Model->__construct('producao')
+#3 /var/www/html/noazul/models/SiteController.php(21): Autenticar->__construct()
+#4 /var/www/html/noazul/controllers/formsController.php(11): SiteController::logar('visitante', '123')
+#5 {main}
+  thrown in /var/www/html/noazul/util/Conexao.php on line 13
+[11-Jul-2015 09:56:43 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2005] Unknown MySQL server host 'mysql.hostinger.com.br' (2)' in /var/www/html/noazul/util/Conexao.php:13
+Stack trace:
+#0 /var/www/html/noazul/util/Conexao.php(13): PDO->__construct('mysql:host=mysq...', 'u857143281_nazu...', 'S2camila')
+#1 /var/www/html/noazul/models/Model.php(6): Conexao->__construct('producao')
+#2 /var/www/html/noazul/models/Autenticar.php(9): Model->__construct('producao')
+#3 /var/www/html/noazul/models/SiteController.php(21): Autenticar->__construct()
+#4 /var/www/html/noazul/controllers/formsController.php(11): SiteController::logar('visitante', '123')
+#5 {main}
+  thrown in /var/www/html/noazul/util/Conexao.php on line 13
+[11-Jul-2015 20:45:13 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'noazul'@'localhost' (using password: YES)' in /var/www/html/noazul/util/Conexao.php:13
+Stack trace:
+#0 /var/www/html/noazul/util/Conexao.php(13): PDO->__construct('mysql:host=loca...', 'noazul', 'localhost')
+#1 /var/www/html/noazul/models/Model.php(6): Conexao->__construct('producao')
+#2 /var/www/html/noazul/models/Autenticar.php(9): Model->__construct('producao')
+#3 /var/www/html/noazul/models/SiteController.php(21): Autenticar->__construct()
+#4 /var/www/html/noazul/controllers/formsController.php(11): SiteController::logar('visitante', '123')
+#5 {main}
+  thrown in /var/www/html/noazul/util/Conexao.php on line 13
+[11-Jul-2015 20:45:15 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'noazul'@'localhost' (using password: YES)' in /var/www/html/noazul/util/Conexao.php:13
+Stack trace:
+#0 /var/www/html/noazul/util/Conexao.php(13): PDO->__construct('mysql:host=loca...', 'noazul', 'localhost')
+#1 /var/www/html/noazul/models/Model.php(6): Conexao->__construct('producao')
+#2 /var/www/html/noazul/models/Autenticar.php(9): Model->__construct('producao')
+#3 /var/www/html/noazul/models/SiteController.php(21): Autenticar->__construct()
+#4 /var/www/html/noazul/controllers/formsController.php(11): SiteController::logar('visitante', '123')
+#5 {main}
+  thrown in /var/www/html/noazul/util/Conexao.php on line 13
+[11-Jul-2015 20:46:31 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000] [1049] Unknown database 'nazul'' in /var/www/html/noazul/util/Conexao.php:13
+Stack trace:
+#0 /var/www/html/noazul/util/Conexao.php(13): PDO->__construct('mysql:host=loca...', 'root', 'forex')
+#1 /var/www/html/noazul/models/Model.php(6): Conexao->__construct('producao')
+#2 /var/www/html/noazul/models/Autenticar.php(9): Model->__construct('producao')
+#3 /var/www/html/noazul/models/SiteController.php(21): Autenticar->__construct()
+#4 /var/www/html/noazul/controllers/formsController.php(11): SiteController::logar('visitante', '123')
+#5 {main}
+  thrown in /var/www/html/noazul/util/Conexao.php on line 13
+[11-Jul-2015 20:46:49 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000] [1049] Unknown database 'nazul'' in /var/www/html/noazul/util/Conexao.php:13
+Stack trace:
+#0 /var/www/html/noazul/util/Conexao.php(13): PDO->__construct('mysql:host=loca...', 'root', 'forex')
+#1 /var/www/html/noazul/models/Model.php(6): Conexao->__construct('producao')
+#2 /var/www/html/noazul/models/Autenticar.php(9): Model->__construct('producao')
+#3 /var/www/html/noazul/models/SiteController.php(21): Autenticar->__construct()
+#4 /var/www/html/noazul/controllers/formsController.php(11): SiteController::logar('visitante', '123')
+#5 {main}
+  thrown in /var/www/html/noazul/util/Conexao.php on line 13

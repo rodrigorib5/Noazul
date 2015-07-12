@@ -12,7 +12,7 @@ class Saldo extends Model {
      * @param string $data
      */
     public function __construct() { 
-        parent::__construct();
+        parent::__construct ( 'producao' );
     }
     /**
      * Subtrair saldo da conta

@@ -1,8 +1,15 @@
 <?php
 $receitaController = new ReceitaController();
 $todasReceitas = $receitaController->getTodasReceitas();
-$receitaLíquida = $receitaController->getReceitaLiquida();
+$receitaLiquida = $receitaController->getReceitaLiquida();
 $valorTotal = null;
+
+if($receitaLiquida < 0){
+ $botao = 'btn-danger';
+}else{
+ $botao = 'panel-primary';
+}
+
 ?>
 <div class="row">
     <div class="col-lg-12">
@@ -71,7 +78,7 @@ $valorTotal = null;
                 </div> 
                  <div class="h3 col-lg-4">
                     <button class="btn btn-lg btn-primary" disabled="disabled"><?= "Total: R$ " . $valorTotal ?></button>
-	               	<button class="btn btn-lg btn-primary" disabled="disabled"><?= "Líquida: R$ " . $receitaLíquida ?></button>
+	               	<button class="btn btn-lg  <?= $botao ?>" disabled="disabled"><?= "Líquida: R$ " . $receitaLiquida ?></button>
                  </div>    
                    
             </div>

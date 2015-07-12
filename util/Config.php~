@@ -16,5 +16,5 @@ class Config {
 	const PRODUCAO = "localhost";
 	const USER_DB_P = "root";
 	const PASS_DB_P = "forex";
-	const DB_NAME_PRODUCAO = "noazul";
+	const DB_NAME_PRODUCAO = "nazul";
 } 

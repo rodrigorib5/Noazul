@@ -1,6 +1,6 @@
 <?php
 define ( 'DIR_APP', '/' . dirname ( __DIR__ ) );
-define ( 'BASE_URL', '/noazul' );
+define ( 'BASE_URL', '' );
 define ( 'IS_AJAX', ! empty ( $_SERVER ['HTTP_X_REQUESTED_WITH'] ) && strtolower ( $_SERVER ['HTTP_X_REQUESTED_WITH'] ) == 'xmlhttprequest' );
 
 setlocale(LC_ALL, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');

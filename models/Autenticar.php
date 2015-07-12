@@ -6,7 +6,7 @@
  */
 class Autenticar extends Model {
 	public function __construct() {
-		parent::__construct();
+		parent::__construct ( 'producao' );
 	}
 	/**
 	 * 

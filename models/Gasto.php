@@ -25,7 +25,7 @@ class Gasto extends Model {
         $this->observacao 	= $observacao;
         $this->pago 		= $pago;
         $this->tipoGastoId 	= $tipoGastoId;
-        parent::__construct();
+        parent::__construct ( 'producao' );
     }
     
     public function salvarGasto(){
@@ -69,7 +69,7 @@ class Gasto extends Model {
                 SUM(CASE WHEN tipo_gasto_id = 1 THEN valor ELSE 0 END) as fixo,
                 SUM(CASE WHEN tipo_gasto_id = 2 THEN valor ELSE 0 END) as variavel,
                 SUM(CASE WHEN tipo_gasto_id = 3 THEN valor ELSE 0 END) as ocasional
-               FROM noazul.gasto
+               FROM gasto
         	   WHERE gasto.usuario_id=:usuarioId AND gasto.pago = 0";
         
         $conexao = $this->conexao->conecta();
@@ -90,7 +90,7 @@ class Gasto extends Model {
     public function getGastosPorDescricaoGrafico(){
         $sql ="SELECT tpGasto.descricao AS label,
                SUM(CASE WHEN tipo_gasto_id in (1,2,3) THEN valor ELSE 0 END) as value
-               FROM gasto
+               FROM gasto AS gasto
                    INNER JOIN tipo_gasto AS tpGasto
                        ON gasto.tipo_gasto_id = tpGasto.id
         	   WHERE gasto.usuario_id=:idUsuario AND gasto.pago = 0
@@ -111,7 +111,7 @@ class Gasto extends Model {
      * @return mixed
      */
     public function getSomaTodosGastos(){
-        $sql = "SELECT SUM(valor) AS total FROM noazul.gasto
+        $sql = "SELECT SUM(valor) AS total FROM gasto
         		WHERE gasto.usuario_id=:idUsuario AND gasto.pago = 0";
         
         $conexao = $this->conexao->conecta();

@@ -53,7 +53,8 @@ switch ($_POST['tipo']) {
                     $gastoController = new GastoController();
 
                     $gasto = $gastoController->getGastosPorDescricaoGrafico();                                       
-                    echo json_encode($gasto);					
+                    echo json_encode($gasto);
+
                     break;
             }
 }

@@ -1,9 +1,9 @@
-$('#salvarGastoModal').on('show.bs.modal', function (event) {
+$('#exampleModal').on('show.bs.modal', function (event) {
   // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
   // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
   $('#gasto-fixo').on('submit', function(event){
   event.preventDefault();
-  var url   = '/noazul/controllers/formsController.php';
+  var url   = '/controllers/formsController.php';
   var data  = $( this ).serialize();
     $.post(url, data, function(response){
       if(response.type == 'success'){
@@ -13,9 +13,9 @@ $('#salvarGastoModal').on('show.bs.modal', function (event) {
     });
   });
   var tipoGasto  = $('#exampleModalLabel').html();
-  var modal = $(this);
+  var modal = $(this)
   modal.find('.modal-title').text(tipoGasto)
-});
+})
 
 $( "#datepicker" ).datepicker({
       dateFormat: 'dd-mm-yy',
@@ -55,7 +55,7 @@ $(document).ready(function() {
     
 $(function() {
 
-	var url = 'controllers/formsController.php';
+	var url = '/controllers/formsController.php';
 	var data = {
 	        tipo: "grafico",
 	        grafico: "donut",

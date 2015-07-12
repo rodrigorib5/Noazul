@@ -9,9 +9,9 @@ class AppUtil {
 	*/
 	public static function redirecionar($para = null) {
 		if($para) {
-			echo "<meta HTTP-EQUIV='Refresh' CONTENT='0;URL=/noazul/$para/'>";
+			echo "<meta HTTP-EQUIV='Refresh' CONTENT='0;URL=/$para/'>";
 		} else {
-			header("Location: /noazul/");
+			header("Location: /");
 		}
 	}
 	/**
